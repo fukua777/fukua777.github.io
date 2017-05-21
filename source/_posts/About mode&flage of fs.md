@@ -1,6 +1,7 @@
 ---
 title: About　mode&flage of fs
 categories: 甫夸之谈———node
+date: 2017-04-10
 tags: "<span style='color: orange;'>fs</span>"
 ---
 

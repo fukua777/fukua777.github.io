@@ -1,6 +1,7 @@
 ---
 title: About　Messi
 categories: Red&Blue
+date: 2016-07-12
 tags: 
    - Messi
 ---

@@ -1,6 +1,7 @@
 ---
 title: About　MongoDB
 tags: mongodb
+date: 2016-09-02
 category: 甫夸之谈———mongoDB
 ---
 > 关于mongoDB

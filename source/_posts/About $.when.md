@@ -1,6 +1,7 @@
 ---
 title: About　$.when()
 categories: 甫夸之谈———JS
+date: 2016-10-11
 tags: "<div style='transform: rotate(10deg) scale(3); color: pink;'>$.when()</div>"
 ---
 

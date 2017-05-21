@@ -1,6 +1,7 @@
 ---
 title: About　Git SSH
 tags: Git
+date: 2016-08-11
 categories: 甫夸之谈————Git 
 ---
 >设置SSH公钥的方法

@@ -1,6 +1,7 @@
 ﻿---
 title: About　RegExp
 categories: 甫夸之谈———正则
+date: 2016-09-27
 tags: "<b style='font-size:40px;'>RegExp</b>"
 ---
 

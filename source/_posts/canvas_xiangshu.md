@@ -1,6 +1,7 @@
 ---
 title: About　Window.devicePixelRatio
 categories: 甫夸之谈———移动端
+date: 2016-11-01
 tags: "Canvas"
 ---
 

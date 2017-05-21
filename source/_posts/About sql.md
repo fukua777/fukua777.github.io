@@ -1,6 +1,7 @@
 ﻿---
 title: About　sql
 categories: 甫夸之谈———sql
+date: 2017-04-02
 tags: "sql"
 ---
 

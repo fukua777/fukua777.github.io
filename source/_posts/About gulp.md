@@ -1,6 +1,7 @@
 ---
 title: About　Gulp
 tags: "<h1>gulp</h1>"
+date: 2016-08-22
 categories: 甫夸之谈———gulp
 ---
 

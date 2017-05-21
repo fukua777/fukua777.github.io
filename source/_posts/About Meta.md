@@ -1,6 +1,7 @@
 ---
 title: About　Meta
 categories: 甫夸之谈———移动端
+date: 2016-09-26
 tags: "<b style='color:red;'>meta</b>"
 ---
 

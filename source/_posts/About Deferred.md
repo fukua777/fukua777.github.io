@@ -1,6 +1,7 @@
 ---
 title: About　$.Deferred()
 categories: 甫夸之谈———JS
+date: 2016-11-01
 tags: "$.Deferred()"
 ---
 
