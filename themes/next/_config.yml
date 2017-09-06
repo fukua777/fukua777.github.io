@@ -30,9 +30,9 @@ canonical: true
 menu:
   home: /
   categories: /categories
-  # about: /about
   archives: /archives
   tags: /tags
+  skill: /about
   # commonweal: /404.html
 
 
@@ -45,7 +45,7 @@ menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
-  about: user
+  skill: cubes
   categories: th
   tags: tags
   archives: archive
