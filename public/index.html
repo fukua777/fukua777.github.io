@@ -1116,126 +1116,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/01/About Deferred/" itemprop="url">
-                  About　$.Deferred()
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-01T00:00:00+08:00" content="2016-11-01">
-              2016-11-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
-                    <span itemprop="name">甫夸之谈———JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>关于deferred对象</p>
-</blockquote>
-<p>　　deferred对象有三种执行状态—未完成，已完成和已失败。如果执行状态是“已完成”，deferred对象会立刻调用done()方法指定的回调函数；如果执行状态是“已失败”，调用fail方法指定的回调函数；如果执行状态是“未完成”，则继续等待，或者调用progress()方法指定的回调函数。<br>　　对于ajax操作，deferred对象会根据返回结果自动改变执行状态，但在普通方法中必须手动指定。在前面关于$.when()的文章中，deferred对象.resolve()即将该对象的执行状态从“未完成”改为“已完成”，从而触发done()方法。类似，还有deferred.reject()方法，作用是将deferred对象的执行状态从“未完成”改为“已失败”，从而触发fail()方法。</p>
-<blockquote>
-<p>关于deferred.promise方法</p>
-</blockquote>
-<p>　　在前面$.when()文章中对普通方法运用deferred对象的例子中，由于deferred对象是全局对象，所以在执行的方法外部也能改变执行状态。为了避免这种情况的发生，产生了deferred.promise()方法。它的作用是在原来deferred对象上返回另一个deferred对象，后者只开放与改变执行状态无关的方法，即done()和fail()，屏蔽了改变执行状态的方法，即resolve()和reject()。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/11/01/canvas_xiangshu/" itemprop="url">
                   About　Window.devicePixelRatio
                 </a>
@@ -1307,6 +1187,126 @@
 <p>主要</p>
 </blockquote>
 <p>　　canvas.width,canvas.height是canvas的画布大小。canvas.style.width,canvas.style.height是浏览器渲染canvas的尺寸。可以同时运用控制缩放效果。<br>　　在移动端运用时，画布的大小应等于浏览器渲染canvas的大小 * 浏览器的分辨率。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/01/About Deferred/" itemprop="url">
+                  About　$.Deferred()
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-01T00:00:00+08:00" content="2016-11-01">
+              2016-11-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>关于deferred对象</p>
+</blockquote>
+<p>　　deferred对象有三种执行状态—未完成，已完成和已失败。如果执行状态是“已完成”，deferred对象会立刻调用done()方法指定的回调函数；如果执行状态是“已失败”，调用fail方法指定的回调函数；如果执行状态是“未完成”，则继续等待，或者调用progress()方法指定的回调函数。<br>　　对于ajax操作，deferred对象会根据返回结果自动改变执行状态，但在普通方法中必须手动指定。在前面关于$.when()的文章中，deferred对象.resolve()即将该对象的执行状态从“未完成”改为“已完成”，从而触发done()方法。类似，还有deferred.reject()方法，作用是将deferred对象的执行状态从“未完成”改为“已失败”，从而触发fail()方法。</p>
+<blockquote>
+<p>关于deferred.promise方法</p>
+</blockquote>
+<p>　　在前面$.when()文章中对普通方法运用deferred对象的例子中，由于deferred对象是全局对象，所以在执行的方法外部也能改变执行状态。为了避免这种情况的发生，产生了deferred.promise()方法。它的作用是在原来deferred对象上返回另一个deferred对象，后者只开放与改变执行状态无关的方法，即done()和fail()，屏蔽了改变执行状态的方法，即resolve()和reject()。</p>
 
           
         
