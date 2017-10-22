@@ -258,6 +258,146 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/11/About $.when/" itemprop="url">
+                  About　$.when()
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-11T00:00:00+08:00" content="2016-10-11">
+              2016-10-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>关于deferred对象</p>
+</blockquote>
+<p>　　简单来说，deferred对象就是jQuery的回调函数解决方案。本意是”延迟“，即程序延迟到某个点再向下执行。</p>
+<blockquote>
+<p>主要</p>
+</blockquote>
+<ul>
+<li>类比于传统ajax操作，运用deferred对象后的链式写法使得代码的可读性更强。</li>
+</ul>
+<pre><code>$.ajax(
+    url: &quot;fukua.html&quot;,
+    success: function(){
+        alert(&quot;messi is best!&quot;);
+    },
+    error: function(){
+        alert(&quot;messi is no better than!&quot;);
+    }
+)
+</code></pre><ul>
+<li>如上，$.ajax()接受一个对象参数，成功、失败分别对应success、error方法。若用deferred延迟对象则可用done、fail方法解决。</li>
+</ul>
+<pre><code>$.ajax(&quot;fukua.html&quot;)
+.done(function(){alert(&quot;messi is best!&quot;);})
+.fail(function(){alert(&quot;messi is no better than!&quot;);})
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/11/About $.when/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/27/About RegExp/" itemprop="url">
                   About　RegExp
                 </a>
@@ -1285,7 +1425,7 @@ var context = canvas.getContext(&apos;2d&apos;);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1293,7 +1433,7 @@ var context = canvas.getContext(&apos;2d&apos;);
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1302,7 +1442,7 @@ var context = canvas.getContext(&apos;2d&apos;);
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
