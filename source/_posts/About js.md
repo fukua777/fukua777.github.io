@@ -1,7 +1,7 @@
 ---
 title: About　js
 tags: "<h1>js</h1>"
-categories: 甫夸之谈———js
+categories: 甫夸之谈———JS
 ---
 
 > 关于
