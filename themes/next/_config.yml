@@ -123,7 +123,7 @@ font:
 social:
   #LinkLabel: Link
   GitHub: http://github.com/fukua777
-  weibo: http://weibo.com/3174630193/profile?topnav=1&wvr=6
+  # weibo: http://weibo.com/3174630193/profile?topnav=1&wvr=6
 
 
 # Social Links Icons
@@ -137,7 +137,7 @@ social_icons:
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   # Twitter: twitter
-  weibo: weibo
+  # weibo: weibo
   
 
 
