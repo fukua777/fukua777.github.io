@@ -1,7 +1,7 @@
 ---
 title: About　ng-if、ng-show
 categories: 甫夸之谈———Angular
-date: 2017-03-06
+date: 2016-09-01
 tags: "ng-if、ng-show"
 ---
 
