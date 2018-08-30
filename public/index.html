@@ -258,6 +258,662 @@
             
               
                 
+                <a class="post-title-link" href="/2018/08/30/About meta referrer/" itemprop="url">
+                  About　Meta referrer
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-08-30T23:49:36+08:00" content="2018-08-30">
+              2018-08-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———Http/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———Http</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　从一个文档发出的请求以及导航到其它页面，都会带有一个referrer头，即网页的来源。而referrer策略则允许手动控制相关信息。</p>
+<blockquote>
+<p>用法</p>
+</blockquote>
+<ol>
+<li>设置请求头中的<code>Referrer-Policy</code>字段。</li>
+<li><code>meta</code>标签设置。</li>
+<li><code>a</code>标签、<code>link</code>标签设置<code>rel</code>属性</li>
+</ol>
+<blockquote>
+<p>值</p>
+</blockquote>
+<ol>
+<li>空字符串。没有referrer策略，默认为<code>no-referrer-when-downgrade</code></li>
+<li><code>no-referrer</code>。所有请求都不带。</li>
+<li><code>no-referrer-when-downgrade</code>。在https的页面中，对https的请求资源发送完整的referrer，http的资源则不带。</li>
+<li><code>same-origin</code>。同源带，否则不带。</li>
+<li><code>origin</code>。对任何资源只发送源的信息，不发送完整的url。</li>
+<li><code>strict-origin</code>。<code>origin</code>和<code>no-referrer-when-downgrade</code>的交集。</li>
+<li><code>origin-when-cross-origin</code>。同源发送完整的url，跨域的发送源信息。</li>
+<li><code>strict-origin-when-cross-origin</code>。<code>strict-origin</code>和<code>origin-when-cross-origin</code>的交集。</li>
+<li><code>unsafe-url</code>。https页面对http资源也发送完整的referrer。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/08/30/About http_options_method/" itemprop="url">
+                  About　Http options method
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-08-30T23:17:22+08:00" content="2018-08-30">
+              2018-08-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———Http/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———Http</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　Http中的options方法被称为预请求，是用于在通信过程中获得具有Request-uri标识资源的方法。</p>
+<blockquote>
+<p>用途</p>
+</blockquote>
+<ol>
+<li>获取服务器支持的Http请求方法。</li>
+<li>检查服务器性能。（CORS）</li>
+</ol>
+<blockquote>
+<p>触发条件</p>
+</blockquote>
+<ol>
+<li>请求方法不是Get/head/post。</li>
+<li>Post方法手动设置Content-Type的值不是<code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code>、<code>text/plain</code>。</li>
+<li>设置了自定义的请求头。（不包括<code>Accept</code>、<code>Accept-Language</code>、<code>Content-Type</code>、<code>Viewport-width</code>等常用字段）</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/06/26/About Fetch/" itemprop="url">
+                  About　Fetch
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-06-26T00:00:00+08:00" content="2018-06-26">
+              2018-06-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　fetch是获取请求的一种方法，会返回Promise，相对ajax，属于较底层api。</p>
+<blockquote>
+<p>特点</p>
+</blockquote>
+<ol>
+<li>默认不带coolie，可以设置，也可以设置其它请求头。</li>
+<li>fetch返回promise，当遇到网络错误时会被reject，对很多4xx、5xx不会报错，判断成功与否需要在resolve时增加对response.ok属性的判断。</li>
+<li>对于xhr中的abort、progress，在fetch中有相应的控制器可处理（FetchController、AbortController），好像还没有正式成为规范。</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/06/26/About Fetch/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/06/16/About 前端名词/" itemprop="url">
+                  About　<small>前端名词</small>
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-06-16T00:00:00+08:00" content="2018-06-16">
+              2018-06-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———SPA、MPA-SSR/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———SPA、MPA&SSR</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　参考相关文档，对前端的几个名词做一些简单的解释，详细的介绍还需要后面逐一阐述。</p>
+<blockquote>
+<p>主要</p>
+</blockquote>
+<ul>
+<li><h1 id="spa">SPA</h1><ol>
+<li>单页面应用，应用只有一个主页面，初次加载时需要加载所有的资源文件，在需要的时候动态载入指定资源。</li>
+<li>css、js资源共用，前后端分离，服务器压力较小，路由在当前主页面切换（需单独设定）。</li>
+<li>不利于SEO，需要特殊实现，可利用SSR。</li>
+</ol>
+</li>
+<li><h1 id="mpa">MPA</h1><ol>
+<li>多页面应用，应用有多个页面，加载时请求当前页面的所有资源。</li>
+<li>整页刷新，对加载速度需求高。</li>
+<li>SEO简易实现，爬虫可直接获得源码。</li>
+</ol>
+</li>
+<li><h1 id="ssr">SSR</h1><ol>
+<li>服务端渲染，服务器将经过计算后的HTML字符串传给浏览器，浏览器端只进行HTML的解析。</li>
+<li>网络传输量大，可以将片段缓存。</li>
+<li>有利于SEO。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>附加</p>
+</blockquote>
+<p>　　网站的结构设计、优化方案还是要综合考虑，扩大自身追求的部分。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/05/03/About Webpack/" itemprop="url">
+                  About　Webpack
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-05-03T00:00:00+08:00" content="2018-05-03">
+              2018-05-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　参考相关文档，基于平常积累，总结webpack的一些基础。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2018/05/03/About Webpack/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2018/04/09/About 数据绑定/" itemprop="url">
                   About　<small>数据双向绑定</small>
                 </a>
@@ -861,614 +1517,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/21/About JSON/" itemprop="url">
-                  About　JSON
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-12-21T21:12:39+08:00" content="2017-12-21">
-              2017-12-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
-                    <span itemprop="name">甫夸之谈———JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>关于</p>
-</blockquote>
-<p>　　JSON是一种数据格式，以<code>key: value</code>的形式来展现，常用处理方法有JSON.stringify、JSON.parse。</p>
-<blockquote>
-<p>主要</p>
-</blockquote>
-<ul>
-<li><p><code>JSON.stringify(value[,replacer[,space]])</code><br>   <code>value</code><br>　　值为基本数据类型或空对象时，返回值为原值或null，标准对象时为JSON数据。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/12/21/About JSON/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/11/About sass/" itemprop="url">
-                  About　SASS
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-12-11T21:36:17+08:00" content="2017-12-11">
-              2017-12-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/甫夸之谈———CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">甫夸之谈———CSS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>关于</p>
-</blockquote>
-<p>　　Sass是一种CSS辅助工具，在CSS语法基础上增加了变量、嵌套、混合、导入等功能，使得开发更加高效。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/12/11/About sass/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/10/21/About js/" itemprop="url">
-                  About　js
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-10-21T11:54:21+08:00" content="2017-10-21">
-              2017-10-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
-                    <span itemprop="name">甫夸之谈———JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>关于</p>
-</blockquote>
-<p>　　参考相关文档，基于平常积累，总结原生js的一些点。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/10/21/About js/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/13/About clipboard/" itemprop="url">
-                  About　Clipboard
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-05-13T00:00:00+08:00" content="2017-05-13">
-              2017-05-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
-                    <span itemprop="name">甫夸之谈———JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>   主要</p>
-</blockquote>
-<p>　　JS中实现特定内容的复制，基本依赖于execCommand()、ClipboardEvent()两者的结合。</p>
-<ul>
-<li><p>execCommand()，对选中、聚焦区域的进行操作，多用于文本编辑。通过运用<code>copy</code>命令可以实现复制到系统粘贴板，限于必须能选中、聚焦。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.execCommand(&apos;Copy&apos;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>ClipboardEvent()，监听系统中<code>copy</code>、<code>cut</code>、<code>paste</code>等操作。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/05/13/About clipboard/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/29/About input/" itemprop="url">
-                  About　input
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-29T00:00:00+08:00" content="2017-04-29">
-              2017-04-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/甫夸之谈———input/" itemprop="url" rel="index">
-                    <span itemprop="name">甫夸之谈———input</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p> 主要</p>
-</blockquote>
-<p>　　input有多种类型，对应不同属性，具有不同功能。大多数类型value表示发送请求的值，具有disabled属性，禁用；required属性，必填；readonly，只读；操作事件为change、input；select()、focus多数可以选中；autocomplete属性，是否有自动完成功能，简单的值为on、off，有多种其它值；autofocus属性，是否自动聚焦；list属性，与datalist标签组合使用，实现列表选项；max、min、maxlegth、minlength属性，对不同类型适用不同，效果一致；name属性，请求的变量名；pattern属性，正则筛选；placeholder属性，默认提示；step属性，调整步长。</p>
-<ul>
-<li><b style="color:black;font-size:25px;">button</b>　　可绑定事件，value为显示名称</li>
-<li><b style="color:black;font-size:25px;">checkbox</b>　　checked属性为选中
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/04/29/About input/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1509,7 +1562,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1517,7 +1570,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1526,7 +1579,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1565,6 +1618,10 @@
               
                 <li class="links-of-blogroll-item">
                   <a href="https://docs.pfan123.com/" title="前端导航" target="_blank">前端导航</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.fukua777.cn" title="新版博客" target="_blank">新版博客</a>
                 </li>
               
             </ul>
