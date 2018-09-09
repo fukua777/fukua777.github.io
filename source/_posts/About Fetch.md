@@ -10,7 +10,7 @@ date: 2018-06-26
 　　fetch是获取请求的一种方法，会返回Promise，相对ajax，属于较底层api。
 > 特点
 
-1. 默认不带coolie，可以设置，也可以设置其它请求头。
+1. 默认不带cookie，可以设置，也可以设置其它请求头。
 2. fetch返回promise，当遇到网络错误时会被reject，对很多4xx、5xx不会报错，判断成功与否需要在resolve时增加对response.ok属性的判断。
 3. 对于xhr中的abort、progress，在fetch中有相应的控制器可处理（FetchController、AbortController），好像还没有正式成为规范。
 
