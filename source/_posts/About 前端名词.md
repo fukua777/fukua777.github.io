@@ -1,8 +1,8 @@
 ---
 title: About　<small>前端名词</small>
+date: 2018-06-16
 tags: "<h1>SPA、MPA&SSR</h1>"
 categories: 甫夸之谈———SPA、MPA&SSR
-date: 2018-06-16
 ---
 
 > 关于

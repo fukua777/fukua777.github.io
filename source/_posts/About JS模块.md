@@ -1,5 +1,6 @@
 ---
 title: About　JS模块
+date: 2018-09-09
 tags: "JS模块"
 categories: 甫夸之谈———JS
 ---

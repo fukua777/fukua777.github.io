@@ -1,5 +1,6 @@
 ---
 title: About　js
+date: 2017-10-21
 tags: "<h1>js</h1>"
 categories: 甫夸之谈———JS
 ---

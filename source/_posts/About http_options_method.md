@@ -1,5 +1,6 @@
 ---
 title: About　Http options method
+date: 2018-08-30
 tags: "<span style='color: #000; font-size: 20px;'>options</span>"
 categories: 甫夸之谈———Http
 ---
