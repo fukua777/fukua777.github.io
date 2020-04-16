@@ -1,0 +1,703 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="<span style='color: #000; font-size: 20px;'>fetch</span>," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="关于
+
+　　fetch是获取请求的一种方法，会返回Promise，相对ajax，属于较底层api。
+
+特点
+
+
+默认不带cookie，可以设置，也可以设置其它请求头。
+fetch返回promise，当遇到网络错误时会被reject，对很多4xx、5xx不会报错，判断成功与否需要在resolve时增加对response.ok属性的判断。
+对于xhr中的abort、progress，在fetch中有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About　Fetch">
+<meta property="og:url" content="http://fukua777.cn/2018/06/26/About Fetch/index.html">
+<meta property="og:site_name" content="甫夸">
+<meta property="og:description" content="关于
+
+　　fetch是获取请求的一种方法，会返回Promise，相对ajax，属于较底层api。
+
+特点
+
+
+默认不带cookie，可以设置，也可以设置其它请求头。
+fetch返回promise，当遇到网络错误时会被reject，对很多4xx、5xx不会报错，判断成功与否需要在resolve时增加对response.ok属性的判断。
+对于xhr中的abort、progress，在fetch中有">
+<meta property="og:updated_time" content="2020-04-16T09:25:13.695Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About　Fetch">
+<meta name="twitter:description" content="关于
+
+　　fetch是获取请求的一种方法，会返回Promise，相对ajax，属于较底层api。
+
+特点
+
+
+默认不带cookie，可以设置，也可以设置其它请求头。
+fetch返回promise，当遇到网络错误时会被reject，对很多4xx、5xx不会报错，判断成功与否需要在resolve时增加对response.ok属性的判断。
+对于xhr中的abort、progress，在fetch中有">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://fukua777.cn/2018/06/26/About Fetch/"/>
+
+  <title> About　Fetch | 甫夸 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">甫夸</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-skill">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cubes"></i> <br />
+            
+            Demo
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                About　Fetch
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-06-26T00:00:00+08:00" content="2018-06-26">
+              2018-06-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　fetch是获取请求的一种方法，会返回Promise，相对ajax，属于较底层api。</p>
+<blockquote>
+<p>特点</p>
+</blockquote>
+<ol>
+<li>默认不带cookie，可以设置，也可以设置其它请求头。</li>
+<li>fetch返回promise，当遇到网络错误时会被reject，对很多4xx、5xx不会报错，判断成功与否需要在resolve时增加对response.ok属性的判断。</li>
+<li>对于xhr中的abort、progress，在fetch中有相应的控制器可处理（FetchController、AbortController），好像还没有正式成为规范。</li>
+</ol>
+<a id="more"></a>
+<blockquote>
+<p>语法</p>
+</blockquote>
+<ul>
+<li><p></p><h1 id="req">request</h1><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fetch( url[, options])</div></pre></td></tr></table></figure>
+<ul>
+<li>url，要获取资源的url</li>
+<li>options，配置项对象，包含请求的设置<ul>
+<li><code>method</code>：请求方法。默认GET。</li>
+<li><code>headers</code>：包含请求头设置的对象。</li>
+<li><code>body</code>：请求的body信息。</li>
+<li><code>mode</code>：请求的模式。如<code>cors</code>、<code>no-cors</code>或者<code>some-origin</code>。</li>
+<li><code>credentials</code>：请求的<code>credentials</code>。如<code>omit</code>、<code>some-origin</code>或者<code>include</code>，设置<code>include</code>时，在当前域请求时会带上cookie。</li>
+<li><code>cache</code>：请求的<code>cache</code>模式。如<code>default</code>、<code>no-store</code>、<code>reload</code>、<code>no-cache</code>、<code>force-cache</code>或者<code>only-if-cached</code>。</li>
+<li><code>redirect</code>：可用的<code>redirect</code>模式。如<code>follow</code>（自动重定向）、<code>error</code>（如果产生重定向会自动终止并抛出错误）或者<code>manual</code>（手动处理）</li>
+<li><code>referrer</code>：请求来源。如<code>no-referrer</code>、<code>client</code>或者一个URL。默认<code>client</code>。？</li>
+<li><code>referrerPolicy</code>：请求来源的策略。如<code>no-referrer</code>、<code>no-referrer-when-downgrade</code>、<code>origin</code>、<code>origin-when-cross-origin</code>、<code>unsafe-url</code>。？</li>
+<li><code>integrity</code>：请求子资源的完整值。？</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p></p><h1 id="res">response</h1><p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fetch( url).then( function(res)&#123;</div><div class="line">    return res.json();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>在请求的resolve时会得到一个Response对象<ul>
+<li><code>status</code>：状态码。</li>
+<li><code>ok</code>：表示请求是否成功的布尔值。</li>
+<li><code>res.blob()</code>、<code>res.arrayBuffer()</code>、<code>res.formData()</code>、<code>res.json()</code>、<code>res.text()</code>这几个方法是读取Response并将它设置为已读（即只可读一次），并返回一个相应格式的promise对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/span-style-color-000-font-size-20px-fetch-span/" rel="tag">#<span style='color: #000; font-size: 20px;'>fetch</span></a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/16/About 前端名词/" rel="next" title="About　<small>前端名词</small>">
+                <i class="fa fa-chevron-left"></i> About　<small>前端名词</small>
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/30/About meta referrer/" rel="prev" title="About　Meta referrer">
+                About　Meta referrer <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/0.jpg"
+               alt="fukua" />
+          <p class="site-author-name" itemprop="name">fukua</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/fukua777" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://docs.pfan123.com/" title="前端导航" target="_blank">前端导航</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#req"><span class="nav-number">1.</span> <span class="nav-text">request</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#res"><span class="nav-number">2.</span> <span class="nav-text">response</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fukua</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>

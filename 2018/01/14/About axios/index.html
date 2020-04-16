@@ -1,0 +1,696 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="vue," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="关于
+
+　　Axios是一个基于promise的HTTP库，可以用在浏览器和node.js中，主要特征：
+
+从浏览器中创建XHR
+从node.js中创建http
+支持Promise
+自动转换JSON数据
+转换请求数据和响应数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About　axios">
+<meta property="og:url" content="http://fukua777.cn/2018/01/14/About axios/index.html">
+<meta property="og:site_name" content="甫夸">
+<meta property="og:description" content="关于
+
+　　Axios是一个基于promise的HTTP库，可以用在浏览器和node.js中，主要特征：
+
+从浏览器中创建XHR
+从node.js中创建http
+支持Promise
+自动转换JSON数据
+转换请求数据和响应数据">
+<meta property="og:updated_time" content="2020-04-16T10:54:27.506Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About　axios">
+<meta name="twitter:description" content="关于
+
+　　Axios是一个基于promise的HTTP库，可以用在浏览器和node.js中，主要特征：
+
+从浏览器中创建XHR
+从node.js中创建http
+支持Promise
+自动转换JSON数据
+转换请求数据和响应数据">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://fukua777.cn/2018/01/14/About axios/"/>
+
+  <title> About　axios | 甫夸 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">甫夸</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-skill">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cubes"></i> <br />
+            
+            Demo
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                About　axios
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-01-14T00:00:00+08:00" content="2018-01-14">
+              2018-01-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/甫夸之谈———JS/" itemprop="url" rel="index">
+                    <span itemprop="name">甫夸之谈———JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>关于</p>
+</blockquote>
+<p>　　Axios是一个基于promise的HTTP库，可以用在浏览器和node.js中，主要特征：</p>
+<ul>
+<li>从浏览器中创建XHR</li>
+<li>从node.js中创建http</li>
+<li>支持Promise</li>
+<li>自动转换JSON数据</li>
+<li>转换请求数据和响应数据<a id="more"></a></li>
+<li>拦截请求和响应</li>
+<li>取消请求</li>
+<li>客户端支持防御XSRF</li>
+</ul>
+<blockquote>
+<p>主要方法别名</p>
+</blockquote>
+<ul>
+<li>axios.request(config)</li>
+<li>axios.get(url[,config])</li>
+<li>axios.delete(url[,config])</li>
+<li>axios.head(url[,config])</li>
+<li>axios.post(url[,data[,config]])</li>
+<li>axios.put(url[,data[,config]])</li>
+<li>axios.patch(url[,data[,config]])</li>
+</ul>
+<blockquote>
+<p>配置</p>
+</blockquote>
+<p>　　<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    url: &apos;&apos;,</div><div class="line">    method: &apos;&apos;,     //默认是get</div><div class="line">    baseURL: &apos;&apos;,</div><div class="line">    transformRequest: [function()&#123;</div><div class="line">        //在发送请求之前对数据进行处理，只能用在POST/PUT/PATCH</div><div class="line">    &#125;],</div><div class="line">    transformResponse: [function()&#123;</div><div class="line">        //在响应数据传给then/catch之前对数据进行处理</div><div class="line">    &#125;],</div><div class="line">    headers: &#123;&#125;,</div><div class="line">    params: &#123;</div><div class="line">        //与URL一起发送的请求参数</div><div class="line">    &#125;,</div><div class="line">    paramsSerializer: function()&#123;</div><div class="line">        //对params进行序列化</div><div class="line">    &#125;,</div><div class="line">    data: &#123;</div><div class="line">        //请求主体，只能用在POST/PUT/PATCH</div><div class="line">    &#125;,</div><div class="line">    timeout: 1000,</div><div class="line">    withCredentials: false      //跨域请求时是否需要使用凭证，默认false</div><div class="line">    adapter: function()&#123;</div><div class="line">        //允许自定义处理请求，返回一个promise</div><div class="line">    &#125;,</div><div class="line">    auth: &#123;</div><div class="line">        username: &apos;&apos;,</div><div class="line">        password: &apos;&apos;,       //表示应该使用HTTP基础验证，并提供Authorization头，会覆写headers设置的Authorization头</div><div class="line">    &#125;,</div><div class="line">    responseType: &apos;json&apos;,       //响应类型，默认json</div><div class="line">    xsrfCookieName: &apos;XSRF-TOKEN&apos;,       //xsrf token的cookie的名称</div><div class="line">    xsrfHeaderName: &apos;X-XSRF-TOKEN&apos;,     //承载xsrf token的Http头的名称</div><div class="line">    onUploadProgress: function()&#123;&#125;,</div><div class="line">    onUploadProgress: function()&#123;&#125;,</div><div class="line">    maxContentLength: 2000,</div><div class="line">    validateStatus: function(status)&#123;</div><div class="line">        return status &gt;= 200 &amp;&amp; status &lt; 300;       //默认，指定promise是resolve还是reject</div><div class="line">    &#125;,</div><div class="line">    maxRedirects: 5,        //默认，定义在node.js中follow的最大重定向数目</div><div class="line">    httpAgent: new http.Agent(&#123; keepAlive: true &#125;),     //在node.js中用于定义在执行http和https时使用的自定义代理,默认不启用</div><div class="line">    httpsAgent: new https.Agent(&#123; keepAlive: true &#125;),</div><div class="line">    proxy: &#123;</div><div class="line">        host: &apos;&apos;,</div><div class="line">        port: 8888,</div><div class="line">        auth: &#123;</div><div class="line">            username: &apos;&apos;,</div><div class="line">            password: &apos;&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    cancelToken: new CancelToken(function (cancel) &#123;</div><div class="line">        //取消请求的cancel token</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>其它</p>
+</blockquote>
+<ul>
+<li><code>axios.defaults.attr = &#39;&#39;</code>;     //全局默认值</li>
+<li><code>var instance = axios.create({key: value});</code>        //创建实例</li>
+<li><code>instance.defaults.headers.common[&#39;attr&#39;] = &#39;&#39;</code>     //实例创建后修改默认值</li>
+<li><code>axios.interceptors.request.use(function(){})</code>      //请求拦截器</li>
+<li><code>axios.interceptors.response.use(function(){})</code>      //响应拦截器</li>
+<li><code>axios.interceptors.request.eject(myInterceptor);</code>      //移除拦截器</li>
+<li><code>axios.all()</code>       //处理并发请求</li>
+<li><code>axios.spread(cb)</code>     </li>
+<li>axios默认对data采用application/json的方式，要采用application/x-www-urlencoded形式，需要用qs.stringfy(qs方式)或$.params(jq)方式对data进行处理</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag">#vue</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/21/About JSON/" rel="next" title="About　JSON">
+                <i class="fa fa-chevron-left"></i> About　JSON
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/15/About Path/" rel="prev" title="About　Path">
+                About　Path <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/0.jpg"
+               alt="fukua" />
+          <p class="site-author-name" itemprop="name">fukua</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/fukua777" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              相关链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://docs.pfan123.com/" title="前端导航" target="_blank">前端导航</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fukua</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
